@@ -1,0 +1,29 @@
+aid: workable
+url: https://raw.githubusercontent.com/api-evangelist/workable/refs/heads/main/apis.yml
+name: Workable
+x-type: company
+description: >-
+  Workable is an end-to-end hiring platform with ATS, AI sourcing, employer branding, and assessment tools. The Workable API exposes jobs, candidates, members, events, and pipeline data.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - HR
+  - ATS
+  - Recruiting
+  - Sourcing
+  - SaaS
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.workable.com/
+  - type: Plans
+    url: plans/workable-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/workable-rate-limits.yml
+  - type: FinOps
+    url: finops/workable-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
