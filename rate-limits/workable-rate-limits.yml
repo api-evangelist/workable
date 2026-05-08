@@ -5,32 +5,58 @@ provider: Workable
 providerId: workable
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
-- HR
-- ATS
-- Recruiting
-- Sourcing
-- SaaS
-- Rate Limiting
-- Quotas
-- Throttling
-description: Placeholder rate-limit artifact for Workable. Replace with real limits once the pipeline
-  researches the provider's rate-limit documentation.
-notes: Initial scaffold — limits have not yet been reconciled against the provider's documentation.
+  - HR
+  - ATS
+  - Recruiting
+  - Rate Limiting
+  - Throttling
+description: >-
+  Workable enforces per-token rate limiting on its v3 REST API. The
+  documented default is a sliding-window bucket per access token; clients
+  receive HTTP 429 with Retry-After when the bucket is exhausted. Dedicated
+  read-only public endpoints (job feeds) are not rate-limited the same way.
 sources:
-- https://www.workable.com/
+  - https://workable.readme.io/
+notes: >-
+  Production limits vary by partnership tier and customer plan; inspect
+  X-Rate-Limit-* response headers for authoritative live values.
 responseCodes:
   throttled: 429
 limits:
-- name: Default
-  scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  - name: Per Access Token Default
+    scope: token
+    metric: requests
+    notes: >-
+      Sliding-window per-token limit; 429 returned with Retry-After when
+      exceeded. Inspect X-Rate-Limit-Limit / X-Rate-Limit-Remaining /
+      X-Rate-Limit-Reset response headers.
+  - name: Listing Endpoints
+    scope: token
+    metric: requests
+    notes: >-
+      List endpoints (e.g. /jobs, /candidates) are paginated and weighted
+      higher than single-record retrievals; paginate aggressively.
+  - name: Webhook Delivery
+    scope: subscription
+    metric: events
+    notes: >-
+      Workable webhooks are delivered with retries on 5xx. Receivers must
+      respond 2xx within the platform timeout to avoid retry loops.
 policies:
-- name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  - name: Backoff Strategy
+    description: >-
+      Exponential backoff with jitter on 429 and honor any Retry-After
+      header. Avoid tight retry loops on listing endpoints.
+  - name: Pagination
+    description: >-
+      Use since_id and limit cursors on candidate / activity endpoints to
+      page through historical data without exhausting the rate limit.
+  - name: Webhooks-First
+    description: >-
+      Subscribe to candidate.* and member.* events for change feeds; reduce
+      poll frequency on listing endpoints accordingly.
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -5,22 +5,21 @@ provider: Workable
 providerId: workable
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
-- HR
-- ATS
-- Recruiting
-- Sourcing
-- SaaS
-- FinOps
-- Cost Management
-- FOCUS
-description: FOCUS-aligned FinOps placeholder for Workable. Pipeline will replace with the provider's
-  real billing-model details once researched.
-notes: Initial scaffold — billing model has not yet been reconciled.
+  - HR
+  - ATS
+  - Recruiting
+  - FinOps
+  - FOCUS
+description: >-
+  Workable's billing model is monthly subscription with optional add-ons
+  (Texting+, Video Interviews+, Assessments+, Performance Reviews+) and a
+  20% annual discount. This artifact maps Workable charges to FOCUS columns
+  for FinOps allocation across recruiting cost centers.
 sources:
-- https://www.workable.com/
-- https://focus.finops.org/focus-specification/v1-3/
+  - https://www.workable.com/pricing
+  - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
   frameworkUrl: https://www.finops.org/framework/
@@ -30,13 +29,13 @@ alignedWith:
 publisherName: Workable
 serviceCategory: HR
 billingModel:
-  pricingCategory: To Be Reconciled
+  pricingCategory: Subscription
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
-  - Usage
-  - Purchase
-  - Adjustment
+    - Purchase
+    - Adjustment
+    - Tax
 focusColumns:
   ServiceName: Workable
   ServiceCategory: HR
@@ -44,24 +43,45 @@ focusColumns:
   PublisherName: Workable
   InvoiceIssuerName: Workable
   BillingCurrency: USD
-  ChargeCategory: Usage
+  ChargeCategory: Purchase
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation against the provider's published metering.
-  unit: varies
-  aggregation: sum
-  dimensions:
-  - account
-  - resource
+  - name: workable_subscription
+    description: Standard / Premier / Enterprise monthly or annual subscription.
+    unit: subscription-month
+    aggregation: sum
+    dimensions:
+      - tier
+      - cost_center
+  - name: workable_addons
+    description: Texting+ / Video Interviews+ / Assessments+ / Performance Reviews+ add-ons (Standard plan only).
+    unit: addon-month
+    aggregation: sum
+    dimensions:
+      - addon
+      - cost_center
+  - name: pass_through_costs
+    description: Premium job board postings, third-party assessments, and SMS pass-through.
+    unit: events
+    aggregation: sum
+    dimensions:
+      - service
 principles:
-- name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
-- name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
-- name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
-- name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  - name: Visibility
+    description: >-
+      Pull monthly Workable invoices and renewal proposals; reconcile
+      against actual usage of texting and video minutes.
+  - name: Allocation
+    description: >-
+      Allocate Workable subscription cost to recruiting / talent functions;
+      tag add-ons by department.
+  - name: Optimization
+    description: >-
+      Compare Premier (bundled) vs. Standard + add-ons monthly cost; opt
+      for the bundle when 2+ add-ons are active.
+  - name: Accountability
+    description: >-
+      Designate Talent Operations as the contract owner; review at renewal
+      and lock 20% annual discount.
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com

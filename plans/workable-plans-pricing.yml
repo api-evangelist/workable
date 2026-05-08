@@ -5,38 +5,154 @@ provider: Workable
 providerId: workable
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
-- HR
-- ATS
-- Recruiting
-- Sourcing
-- SaaS
-- Plans
-description: Placeholder plans/pricing artifact for Workable. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled against the provider's documentation.
+  - HR
+  - ATS
+  - Recruiting
+  - Plans
+description: >-
+  Workable publishes three monthly plans — Standard, Premier, Enterprise —
+  with a 20% discount for annual commitment. Standard is the entry tier and
+  add-ons (Texting+, Video Interviews+, Assessments+, Performance Reviews+)
+  are available a la carte; Premier and Enterprise include them.
 sources:
-- https://www.workable.com/
+  - https://www.workable.com/pricing
 plans:
-- id: workable-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers (Free / Pro / Enterprise / pay-as-you-go,
-    etc.) once pricing is reconciled.
-  entries:
-  - label: API Access
-    name: api_access
-    type: flat
-    metric: varies
-    limit: -1
-    timeFrame: usage
-    geo: global
-    unit: 1
-    price: see https://www.workable.com/
-    userMultiplied: false
-  elements:
-  - name: Pending Reconciliation
+  - id: workable-standard
+    name: Standard
+    type: subscription
+    description: Core ATS, sourcing, candidate management, and reporting.
+    entries:
+      - label: Monthly
+        name: workable_standard_monthly
+        type: flat
+        metric: subscription
+        timeFrame: monthly
+        unit: 1
+        price: '299'
+        currency: USD
+        userMultiplied: false
+      - label: Annual (20% off)
+        name: workable_standard_annual
+        type: flat
+        metric: subscription
+        timeFrame: yearly
+        unit: 1
+        price: '3588'
+        currency: USD
+        userMultiplied: false
+    elements:
+      - name: AI sourcing and active job board distribution
+      - name: Candidate pipeline management and stages
+      - name: Calendar / video meeting integrations
+      - name: REST API and webhook access
+  - id: workable-premier
+    name: Premier
+    type: subscription
+    description: >-
+      Standard plus Texting+, Video Interviews+, and Assessments+ included
+      out of the box.
+    entries:
+      - label: Monthly
+        name: workable_premier_monthly
+        type: flat
+        metric: subscription
+        timeFrame: monthly
+        unit: 1
+        price: '599'
+        currency: USD
+        userMultiplied: false
+      - label: Annual (20% off)
+        name: workable_premier_annual
+        type: flat
+        metric: subscription
+        timeFrame: yearly
+        unit: 1
+        price: '7188'
+        currency: USD
+        userMultiplied: false
+  - id: workable-enterprise
+    name: Enterprise
+    type: subscription
+    description: >-
+      Premier plus enterprise SSO, advanced approvals, custom roles, and
+      premium support.
+    entries:
+      - label: Monthly
+        name: workable_enterprise_monthly
+        type: flat
+        metric: subscription
+        timeFrame: monthly
+        unit: 1
+        price: '719'
+        currency: USD
+        userMultiplied: false
+      - label: Annual (20% off)
+        name: workable_enterprise_annual
+        type: flat
+        metric: subscription
+        timeFrame: yearly
+        unit: 1
+        price: '8628'
+        currency: USD
+        userMultiplied: false
+  - id: workable-texting-addon
+    name: Texting+ Add-On
+    type: addon
+    description: SMS communication with candidates (included in Premier+).
+    entries:
+      - label: Monthly
+        name: workable_texting_addon
+        type: flat
+        metric: addon
+        timeFrame: monthly
+        unit: 1
+        price: '89'
+        currency: USD
+        userMultiplied: false
+  - id: workable-video-addon
+    name: Video Interviews+ Add-On
+    type: addon
+    description: One-way and live video interviews (included in Premier+).
+    entries:
+      - label: Monthly
+        name: workable_video_addon
+        type: flat
+        metric: addon
+        timeFrame: monthly
+        unit: 1
+        price: '109'
+        currency: USD
+        userMultiplied: false
+  - id: workable-assessments-addon
+    name: Assessments+ Add-On
+    type: addon
+    description: Skills and personality assessments (included in Premier+).
+    entries:
+      - label: Monthly
+        name: workable_assessments_addon
+        type: flat
+        metric: addon
+        timeFrame: monthly
+        unit: 1
+        price: '59'
+        currency: USD
+        userMultiplied: false
+  - id: workable-performance-addon
+    name: Performance Reviews+ Add-On
+    type: addon
+    description: Continuous performance reviews bundled with Workable HR.
+    entries:
+      - label: Monthly
+        name: workable_performance_addon
+        type: flat
+        metric: addon
+        timeFrame: monthly
+        unit: 1
+        price: '39'
+        currency: USD
+        userMultiplied: false
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com

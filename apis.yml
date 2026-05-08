@@ -3,27 +3,261 @@ url: https://raw.githubusercontent.com/api-evangelist/workable/refs/heads/main/a
 name: Workable
 x-type: company
 description: >-
-  Workable is an end-to-end hiring platform with ATS, AI sourcing, employer branding, and assessment tools. The Workable API exposes jobs, candidates, members, events, and pipeline data.
+  Workable is an end-to-end hiring platform with ATS, AI sourcing, employer
+  branding, video interviewing, assessments, and HR. The Workable REST API
+  (v3) exposes jobs, candidates, stages, members, departments, custom
+  attributes, offers, assessments, and webhooks.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - HR
   - ATS
   - Recruiting
   - Sourcing
+  - Video Interviews
+  - Assessments
   - SaaS
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: workable:workable-jobs-api
+    name: Workable Jobs API
+    tags:
+      - Jobs
+      - Postings
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+      - url: https://workable.readme.io/reference
+        type: API Reference
+    description: >-
+      Create, read, update, and publish job postings. Jobs are the core
+      organizing entity in Workable; pipelines, candidates, members, and
+      activities are scoped to a job shortcode.
+  - aid: workable:workable-candidates-api
+    name: Workable Candidates API
+    tags:
+      - Candidates
+      - Applicants
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+      - url: https://workable.readme.io/reference
+        type: API Reference
+    description: >-
+      Create candidates from external sources, retrieve candidate profiles,
+      and update profile data, resumes, cover letters, and source attribution.
+  - aid: workable:workable-stages-api
+    name: Workable Stages API
+    tags:
+      - Stages
+      - Pipeline
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Read pipeline stages configured for a job and move candidates between
+      stages (sourced, applied, phone screen, interview, offer, hired).
+  - aid: workable:workable-members-api
+    name: Workable Members API
+    tags:
+      - Members
+      - Recruiters
+      - Users
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Manage Workable team members, recruiter accounts, and the per-job
+      collaborators (hiring managers, interviewers, reviewers).
+  - aid: workable:workable-recruiters-api
+    name: Workable Recruiters API
+    tags:
+      - Recruiters
+      - External
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Manage external agency recruiters who can submit candidates against
+      Workable jobs.
+  - aid: workable:workable-departments-api
+    name: Workable Departments API
+    tags:
+      - Departments
+      - Org Structure
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Read the company's department list used to scope job postings and
+      reporting.
+  - aid: workable:workable-custom-attributes-api
+    name: Workable Custom Attributes API
+    tags:
+      - Custom Attributes
+      - Metadata
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Define and read custom attributes attached to candidates, jobs, and
+      requisitions for tenant-specific reporting and automation.
+  - aid: workable:workable-activities-api
+    name: Workable Activities API
+    tags:
+      - Activities
+      - Audit
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Read activity-log entries for candidates and jobs (stage moves,
+      comments, evaluations) for audit and integration use cases.
+  - aid: workable:workable-comments-api
+    name: Workable Comments API
+    tags:
+      - Comments
+      - Notes
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Add and read free-form comments and @-mentions on candidate profiles
+      for collaboration with hiring teams.
+  - aid: workable:workable-evaluations-api
+    name: Workable Evaluations API
+    tags:
+      - Evaluations
+      - Scorecards
+      - Feedback
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Submit and read interviewer evaluations and scorecards aligned to the
+      job's interview kit.
+  - aid: workable:workable-offers-api
+    name: Workable Offers API
+    tags:
+      - Offers
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Generate and track offers including templates, compensation
+      breakdowns, and offer letter PDFs.
+  - aid: workable:workable-assessments-api
+    name: Workable Assessments API
+    tags:
+      - Assessments
+      - Tests
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Trigger and read candidate assessments delivered through Workable's
+      assessment platform (Assessments+).
+  - aid: workable:workable-disqualification-reasons-api
+    name: Workable Disqualification Reasons API
+    tags:
+      - Disqualification
+      - Rejection
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      List configured disqualification reasons used when rejecting a
+      candidate (not a fit, withdrew, declined offer, hired elsewhere).
+  - aid: workable:workable-questions-api
+    name: Workable Questions API
+    tags:
+      - Questions
+      - Application Forms
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Manage application form questions per job, including knockout
+      questions and EEO surveys.
+  - aid: workable:workable-events-api
+    name: Workable Events API
+    tags:
+      - Events
+      - Interviews
+      - Scheduling
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Read and create scheduled events (phone screens, interviews) for a
+      candidate, integrated with Workable's calendar sync.
+  - aid: workable:workable-webhooks-api
+    name: Workable Webhooks API
+    tags:
+      - Webhooks
+      - Subscriptions
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Subscribe to Workable events (candidate.created, candidate.moved,
+      candidate.hired, candidate.disqualified, member.created) for
+      downstream automation.
+  - aid: workable:workable-public-jobs-api
+    name: Workable Public Jobs API
+    tags:
+      - Jobs
+      - Public
+    properties:
+      - url: https://workable.readme.io/
+        type: Documentation
+    description: >-
+      Read-only public endpoint that exposes published jobs for embedding
+      job listings on external careers pages without authentication.
 common:
   - type: Website
     url: https://www.workable.com/
+  - type: Documentation
+    url: https://workable.readme.io/
+  - type: API Reference
+    url: https://workable.readme.io/reference
+  - type: Pricing
+    url: https://www.workable.com/pricing
+  - type: Login
+    url: https://www.workable.com/login
+  - type: Status
+    url: https://status.workable.com/
+  - type: Blog
+    url: https://resources.workable.com/
+  - type: Support
+    url: https://help.workable.com/
+  - type: GitHub Organization
+    url: https://github.com/Workable
+  - type: Privacy Policy
+    url: https://www.workable.com/privacy-policy
+  - type: Terms of Service
+    url: https://www.workable.com/terms
   - type: Plans
     url: plans/workable-plans-pricing.yml
   - type: RateLimits
     url: rate-limits/workable-rate-limits.yml
   - type: FinOps
     url: finops/workable-finops.yml
+  - type: Features
+    data:
+      - REST API v3 with bearer-token authentication
+      - Workable subdomain-scoped base URL (https://{subdomain}.workable.com/spi/v3/)
+      - Standard plan from $299/month, Premier $599/month, Enterprise $719/month
+      - 20% annual discount on all paid plans
+      - Texting+, Video Interviews+, Assessments+ available as Standard add-ons
+      - Webhooks for candidate, member, and stage events
+      - AI sourcing and employer-branding integrated alongside ATS
+      - Public jobs feed for embedding on external careers pages
+    sources:
+      - https://www.workable.com/pricing
+      - https://workable.readme.io/
+    updated: '2026-05-08'
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
