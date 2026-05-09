@@ -1,0 +1,13 @@
+{
+  "repo": "workable",
+  "feeds": [
+    {
+      "source": "https://resources.workable.com/",
+      "feed_url": "https://resources.workable.com/feed/",
+      "title": "Recruiting Resources: How to Recruit and Hire Better",
+      "saved": 25
+    }
+  ],
+  "fetched": "2026-05-09T20:17:51Z",
+  "post_count": 25
+}
