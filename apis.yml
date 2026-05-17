@@ -1,7 +1,7 @@
 aid: workable
 url: https://raw.githubusercontent.com/api-evangelist/workable/refs/heads/main/apis.yml
 name: Workable
-x-type: company
+kind: company
 description: >-
   Workable is an end-to-end hiring platform with ATS, AI sourcing, employer
   branding, video interviewing, assessments, and HR. The Workable REST API
@@ -29,7 +29,7 @@ apis:
       - url: https://workable.readme.io/
         type: Documentation
       - url: https://workable.readme.io/reference
-        type: API Reference
+        type: APIReference
     description: >-
       Create, read, update, and publish job postings. Jobs are the core
       organizing entity in Workable; pipelines, candidates, members, and
@@ -43,7 +43,7 @@ apis:
       - url: https://workable.readme.io/
         type: Documentation
       - url: https://workable.readme.io/reference
-        type: API Reference
+        type: APIReference
     description: >-
       Create candidates from external sources, retrieve candidate profiles,
       and update profile data, resumes, cover letters, and source attribution.
@@ -220,23 +220,23 @@ common:
     url: https://www.workable.com/
   - type: Documentation
     url: https://workable.readme.io/
-  - type: API Reference
+  - type: APIReference
     url: https://workable.readme.io/reference
   - type: Pricing
     url: https://www.workable.com/pricing
   - type: Login
     url: https://www.workable.com/login
-  - type: Status
+  - type: StatusPage
     url: https://status.workable.com/
   - type: Blog
     url: https://resources.workable.com/
   - type: Support
     url: https://help.workable.com/
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/Workable
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.workable.com/privacy-policy
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.workable.com/terms
   - type: Plans
     url: plans/workable-plans-pricing.yml
