@@ -216,6 +216,8 @@ apis:
       Read-only public endpoint that exposes published jobs for embedding
       job listings on external careers pages without authentication.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/workable-software
   - type: Website
     url: https://www.workable.com/
   - type: Documentation
