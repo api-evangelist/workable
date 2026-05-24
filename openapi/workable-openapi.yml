@@ -1,0 +1,814 @@
+openapi: 3.1.0
+info:
+  title: Workable API
+  description: |
+    REST API for Workable's recruiting and HR platform — manage jobs, candidates,
+    employees, departments, members, offers, requisitions, time tracking, time off,
+    review cycles, and subscriptions.
+  version: "3.21.0"
+  contact:
+    name: Workable
+    url: https://workable.readme.io/
+servers:
+  - url: https://{subdomain}.workable.com/spi/v3
+    description: Workable API
+    variables:
+      subdomain:
+        default: example
+        description: Workable account subdomain
+security:
+  - bearerAuth: []
+tags:
+  - name: Accounts
+  - name: Departments
+  - name: Members
+  - name: Recruiters
+  - name: Jobs
+  - name: Candidates
+  - name: Employees
+  - name: Offers
+  - name: Requisitions
+  - name: ReviewCycles
+  - name: TimeTracking
+  - name: TimeOff
+  - name: Subscriptions
+  - name: CustomAttributes
+  - name: Events
+  - name: Stages
+paths:
+  /accounts:
+    get:
+      tags: [Accounts]
+      summary: List accounts
+      operationId: listAccounts
+      responses:
+        "200": { description: OK }
+  /accounts/{subdomain}:
+    parameters:
+      - in: path
+        name: subdomain
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Accounts]
+      summary: Get account by subdomain
+      operationId: getAccount
+      responses:
+        "200": { description: OK }
+  /collaboration_permissions:
+    get:
+      tags: [Accounts]
+      summary: List collaboration permissions
+      operationId: listCollaborationPermissions
+      responses:
+        "200": { description: OK }
+  /legal_entities:
+    get:
+      tags: [Accounts]
+      summary: List legal entities
+      operationId: listLegalEntities
+      responses:
+        "200": { description: OK }
+  /permission_sets:
+    get:
+      tags: [Accounts]
+      summary: List permission sets
+      operationId: listPermissionSets
+      responses:
+        "200": { description: OK }
+  /work_schedules:
+    get:
+      tags: [Accounts]
+      summary: List work schedules
+      operationId: listWorkSchedules
+      responses:
+        "200": { description: OK }
+  /departments:
+    get:
+      tags: [Departments]
+      summary: List departments
+      operationId: listDepartments
+      responses:
+        "200": { description: OK }
+    post:
+      tags: [Departments]
+      summary: Create department
+      operationId: createDepartment
+      responses:
+        "201": { description: Created }
+    put:
+      tags: [Departments]
+      summary: Update department
+      operationId: updateDepartment
+      responses:
+        "200": { description: OK }
+  /departments/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    delete:
+      tags: [Departments]
+      summary: Delete department
+      operationId: deleteDepartment
+      responses:
+        "204": { description: No Content }
+  /departments/{id}/merge:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Departments]
+      summary: Merge departments
+      operationId: mergeDepartments
+      responses:
+        "200": { description: OK }
+  /members:
+    get:
+      tags: [Members]
+      summary: List members
+      operationId: listMembers
+      responses:
+        "200": { description: OK }
+    put:
+      tags: [Members]
+      summary: Update members
+      operationId: updateMembers
+      responses:
+        "200": { description: OK }
+  /members/invite:
+    post:
+      tags: [Members]
+      summary: Invite member
+      operationId: inviteMember
+      responses:
+        "201": { description: Created }
+  /members/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    delete:
+      tags: [Members]
+      summary: Delete member
+      operationId: deleteMember
+      responses:
+        "204": { description: No Content }
+  /members/{id}/enable:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Members]
+      summary: Enable member
+      operationId: enableMember
+      responses:
+        "200": { description: OK }
+  /recruiters:
+    get:
+      tags: [Recruiters]
+      summary: List recruiters
+      operationId: listRecruiters
+      responses:
+        "200": { description: OK }
+  /jobs:
+    get:
+      tags: [Jobs]
+      summary: List jobs
+      operationId: listJobs
+      responses:
+        "200": { description: OK }
+  /jobs/{shortcode}:
+    parameters:
+      - in: path
+        name: shortcode
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Jobs]
+      summary: Get job by shortcode
+      operationId: getJob
+      responses:
+        "200": { description: OK }
+  /jobs/{shortcode}/application_form:
+    parameters:
+      - in: path
+        name: shortcode
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Jobs]
+      summary: Get job application form
+      operationId: getJobApplicationForm
+      responses:
+        "200": { description: OK }
+  /jobs/{shortcode}/questions:
+    parameters:
+      - in: path
+        name: shortcode
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Jobs]
+      summary: Get job questions
+      operationId: getJobQuestions
+      responses:
+        "200": { description: OK }
+  /jobs/{shortcode}/custom_attributes:
+    parameters:
+      - in: path
+        name: shortcode
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Jobs]
+      summary: Get job custom attributes
+      operationId: getJobCustomAttributes
+      responses:
+        "200": { description: OK }
+  /jobs/{shortcode}/members:
+    parameters:
+      - in: path
+        name: shortcode
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Jobs]
+      summary: Get job members
+      operationId: getJobMembers
+      responses:
+        "200": { description: OK }
+  /jobs/{shortcode}/stages:
+    parameters:
+      - in: path
+        name: shortcode
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Jobs]
+      summary: Get job stages
+      operationId: getJobStages
+      responses:
+        "200": { description: OK }
+  /jobs/{shortcode}/recruiters:
+    parameters:
+      - in: path
+        name: shortcode
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Jobs]
+      summary: Get job recruiters
+      operationId: getJobRecruiters
+      responses:
+        "200": { description: OK }
+  /jobs/{shortcode}/activities:
+    parameters:
+      - in: path
+        name: shortcode
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Jobs]
+      summary: Get job activities
+      operationId: getJobActivities
+      responses:
+        "200": { description: OK }
+  /jobs/{shortcode}/candidates:
+    parameters:
+      - in: path
+        name: shortcode
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Candidates]
+      summary: Create candidate on job
+      operationId: createJobCandidate
+      responses:
+        "201": { description: Created }
+  /stages:
+    get:
+      tags: [Stages]
+      summary: List stages
+      operationId: listStages
+      responses:
+        "200": { description: OK }
+  /events:
+    get:
+      tags: [Events]
+      summary: List events
+      operationId: listEvents
+      responses:
+        "200": { description: OK }
+  /events/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Events]
+      summary: Get event
+      operationId: getEvent
+      responses:
+        "200": { description: OK }
+  /candidates:
+    get:
+      tags: [Candidates]
+      summary: List candidates
+      operationId: listCandidates
+      responses:
+        "200": { description: OK }
+  /candidates/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Candidates]
+      summary: Get candidate
+      operationId: getCandidate
+      responses:
+        "200": { description: OK }
+    put:
+      tags: [Candidates]
+      summary: Update candidate
+      operationId: updateCandidate
+      responses:
+        "200": { description: OK }
+  /candidates/{id}/comments:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Candidates]
+      summary: Add candidate comment
+      operationId: addCandidateComment
+      responses:
+        "201": { description: Created }
+  /candidates/{id}/copy:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Candidates]
+      summary: Copy candidate
+      operationId: copyCandidate
+      responses:
+        "201": { description: Created }
+  /candidates/{id}/disqualify:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Candidates]
+      summary: Disqualify candidate
+      operationId: disqualifyCandidate
+      responses:
+        "200": { description: OK }
+  /candidates/{id}/revert:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Candidates]
+      summary: Revert candidate disqualification
+      operationId: revertCandidate
+      responses:
+        "200": { description: OK }
+  /candidates/{id}/move:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Candidates]
+      summary: Move candidate
+      operationId: moveCandidate
+      responses:
+        "200": { description: OK }
+  /candidates/{id}/relocate:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Candidates]
+      summary: Relocate candidate
+      operationId: relocateCandidate
+      responses:
+        "200": { description: OK }
+  /candidates/{id}/ratings:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Candidates]
+      summary: Add candidate rating
+      operationId: addCandidateRating
+      responses:
+        "201": { description: Created }
+    put:
+      tags: [Candidates]
+      summary: Update candidate rating
+      operationId: updateCandidateRating
+      responses:
+        "200": { description: OK }
+  /candidates/{id}/tags:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Candidates]
+      summary: Add candidate tags
+      operationId: addCandidateTags
+      responses:
+        "201": { description: Created }
+  /candidates/{id}/activities:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Candidates]
+      summary: Get candidate activities
+      operationId: getCandidateActivities
+      responses:
+        "200": { description: OK }
+  /candidates/{id}/files:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Candidates]
+      summary: Get candidate files
+      operationId: getCandidateFiles
+      responses:
+        "200": { description: OK }
+  /candidates/{id}/offer:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Candidates]
+      summary: Get candidate offer
+      operationId: getCandidateOffer
+      responses:
+        "200": { description: OK }
+  /candidates/{id}/update_custom_attribute_value:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Candidates]
+      summary: Update candidate custom attribute value
+      operationId: updateCandidateCustomAttributeValue
+      responses:
+        "200": { description: OK }
+  /talent_pool/candidates:
+    post:
+      tags: [Candidates]
+      summary: Add to talent pool
+      operationId: addToTalentPool
+      responses:
+        "201": { description: Created }
+  /employees:
+    get:
+      tags: [Employees]
+      summary: List employees
+      operationId: listEmployees
+      responses:
+        "200": { description: OK }
+    post:
+      tags: [Employees]
+      summary: Create employee
+      operationId: createEmployee
+      responses:
+        "201": { description: Created }
+  /employees/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Employees]
+      summary: Get employee
+      operationId: getEmployee
+      responses:
+        "200": { description: OK }
+    put:
+      tags: [Employees]
+      summary: Update employee
+      operationId: updateEmployee
+      responses:
+        "200": { description: OK }
+  /employees/orgchart:
+    get:
+      tags: [Employees]
+      summary: Get organization chart
+      operationId: getOrgChart
+      responses:
+        "200": { description: OK }
+  /employees/{id}/documents:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Employees]
+      summary: List employee documents
+      operationId: listEmployeeDocuments
+      responses:
+        "200": { description: OK }
+    post:
+      tags: [Employees]
+      summary: Upload employee document
+      operationId: uploadEmployeeDocument
+      responses:
+        "201": { description: Created }
+  /employee_fields:
+    get:
+      tags: [Employees]
+      summary: List employee fields
+      operationId: listEmployeeFields
+      responses:
+        "200": { description: OK }
+  /offers/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Offers]
+      summary: Get offer
+      operationId: getOffer
+      responses:
+        "200": { description: OK }
+  /offers/{id}/approve:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Offers]
+      summary: Approve offer
+      operationId: approveOffer
+      responses:
+        "200": { description: OK }
+  /offers/{id}/reject:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Offers]
+      summary: Reject offer
+      operationId: rejectOffer
+      responses:
+        "200": { description: OK }
+  /requisitions:
+    get:
+      tags: [Requisitions]
+      summary: List requisitions
+      operationId: listRequisitions
+      responses:
+        "200": { description: OK }
+    post:
+      tags: [Requisitions]
+      summary: Create requisition
+      operationId: createRequisition
+      responses:
+        "201": { description: Created }
+    patch:
+      tags: [Requisitions]
+      summary: Update requisitions
+      operationId: patchRequisitions
+      responses:
+        "200": { description: OK }
+  /requisitions/{code}:
+    parameters:
+      - in: path
+        name: code
+        required: true
+        schema: { type: string }
+    get:
+      tags: [Requisitions]
+      summary: Get requisition
+      operationId: getRequisition
+      responses:
+        "200": { description: OK }
+  /requisitions/{code}/approve:
+    parameters:
+      - in: path
+        name: code
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Requisitions]
+      summary: Approve requisition
+      operationId: approveRequisition
+      responses:
+        "200": { description: OK }
+  /requisitions/{code}/reject:
+    parameters:
+      - in: path
+        name: code
+        required: true
+        schema: { type: string }
+    post:
+      tags: [Requisitions]
+      summary: Reject requisition
+      operationId: rejectRequisition
+      responses:
+        "200": { description: OK }
+  /review-cycles/templates:
+    get:
+      tags: [ReviewCycles]
+      summary: List review cycle templates
+      operationId: listReviewCycleTemplates
+      responses:
+        "200": { description: OK }
+    post:
+      tags: [ReviewCycles]
+      summary: Create review cycle template
+      operationId: createReviewCycleTemplate
+      responses:
+        "201": { description: Created }
+  /review-cycles/templates/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    get:
+      tags: [ReviewCycles]
+      summary: Get review cycle template
+      operationId: getReviewCycleTemplate
+      responses:
+        "200": { description: OK }
+  /time-tracking/time-entries:
+    get:
+      tags: [TimeTracking]
+      summary: List time entries
+      operationId: listTimeEntries
+      responses:
+        "200": { description: OK }
+    post:
+      tags: [TimeTracking]
+      summary: Create time entry
+      operationId: createTimeEntry
+      responses:
+        "201": { description: Created }
+  /time-tracking/employees/{id}/time-entries:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    post:
+      tags: [TimeTracking]
+      summary: Create employee time entry
+      operationId: createEmployeeTimeEntry
+      responses:
+        "201": { description: Created }
+  /time-tracking/employees/{id}/time-entries/{uuid}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+      - in: path
+        name: uuid
+        required: true
+        schema: { type: string }
+    put:
+      tags: [TimeTracking]
+      summary: Update employee time entry
+      operationId: updateEmployeeTimeEntry
+      responses:
+        "200": { description: OK }
+    delete:
+      tags: [TimeTracking]
+      summary: Delete employee time entry
+      operationId: deleteEmployeeTimeEntry
+      responses:
+        "204": { description: No Content }
+  /timeoff/requests:
+    get:
+      tags: [TimeOff]
+      summary: List time off requests
+      operationId: listTimeOffRequests
+      responses:
+        "200": { description: OK }
+    post:
+      tags: [TimeOff]
+      summary: Create time off request
+      operationId: createTimeOffRequest
+      responses:
+        "201": { description: Created }
+  /timeoff/categories:
+    get:
+      tags: [TimeOff]
+      summary: List time off categories
+      operationId: listTimeOffCategories
+      responses:
+        "200": { description: OK }
+  /timeoff/balances:
+    get:
+      tags: [TimeOff]
+      summary: List time off balances
+      operationId: listTimeOffBalances
+      responses:
+        "200": { description: OK }
+  /timeoff/approvals/{key}:
+    parameters:
+      - in: path
+        name: key
+        required: true
+        schema: { type: string }
+    post:
+      tags: [TimeOff]
+      summary: Approve time off request
+      operationId: approveTimeOff
+      responses:
+        "200": { description: OK }
+  /custom_attributes:
+    get:
+      tags: [CustomAttributes]
+      summary: List custom attributes
+      operationId: listCustomAttributes
+      responses:
+        "200": { description: OK }
+  /disqualification_reasons:
+    get:
+      tags: [CustomAttributes]
+      summary: List disqualification reasons
+      operationId: listDisqualificationReasons
+      responses:
+        "200": { description: OK }
+  /subscriptions:
+    get:
+      tags: [Subscriptions]
+      summary: List subscriptions
+      operationId: listSubscriptions
+      responses:
+        "200": { description: OK }
+    post:
+      tags: [Subscriptions]
+      summary: Create subscription
+      operationId: createSubscription
+      responses:
+        "201": { description: Created }
+  /subscriptions/{id}:
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema: { type: string }
+    delete:
+      tags: [Subscriptions]
+      summary: Delete subscription
+      operationId: deleteSubscription
+      responses:
+        "204": { description: No Content }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: |
+        Workable API token authentication using Bearer token in Authorization header.
+        Token types include account tokens, user tokens, and API access tokens.
