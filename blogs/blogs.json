@@ -2,12 +2,20 @@
   "repo": "workable",
   "feeds": [
     {
-      "source": "https://resources.workable.com/",
+      "source": "https://resources.workable.com/feed/",
       "feed_url": "https://resources.workable.com/feed/",
-      "title": "Recruiting Resources: How to Recruit and Hire Better",
-      "saved": 25
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://status.workable.com/",
+      "feed_url": "https://workable.statuspage.io/history.atom",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
     }
   ],
-  "fetched": "2026-05-17T20:20:35Z",
-  "post_count": 50
+  "fetched": "2026-06-01T23:35:02Z",
+  "post_count": 58
 }
