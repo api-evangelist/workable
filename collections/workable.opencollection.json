@@ -1,0 +1,1378 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Workable API",
+    "version": "3.21.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Accounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/accounts"
+          },
+          "docs": "List accounts"
+        },
+        {
+          "info": {
+            "name": "Get account by subdomain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/accounts/:subdomain",
+            "params": [
+              {
+                "name": "subdomain",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get account by subdomain"
+        },
+        {
+          "info": {
+            "name": "List collaboration permissions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/collaboration_permissions"
+          },
+          "docs": "List collaboration permissions"
+        },
+        {
+          "info": {
+            "name": "List legal entities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/legal_entities"
+          },
+          "docs": "List legal entities"
+        },
+        {
+          "info": {
+            "name": "List permission sets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/permission_sets"
+          },
+          "docs": "List permission sets"
+        },
+        {
+          "info": {
+            "name": "List work schedules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/work_schedules"
+          },
+          "docs": "List work schedules"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Departments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List departments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/departments"
+          },
+          "docs": "List departments"
+        },
+        {
+          "info": {
+            "name": "Create department",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/departments"
+          },
+          "docs": "Create department"
+        },
+        {
+          "info": {
+            "name": "Update department",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{subdomain}.workable.com/spi/v3/departments"
+          },
+          "docs": "Update department"
+        },
+        {
+          "info": {
+            "name": "Delete department",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{subdomain}.workable.com/spi/v3/departments/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete department"
+        },
+        {
+          "info": {
+            "name": "Merge departments",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/departments/:id/merge",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Merge departments"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Members",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/members"
+          },
+          "docs": "List members"
+        },
+        {
+          "info": {
+            "name": "Update members",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{subdomain}.workable.com/spi/v3/members"
+          },
+          "docs": "Update members"
+        },
+        {
+          "info": {
+            "name": "Invite member",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/members/invite"
+          },
+          "docs": "Invite member"
+        },
+        {
+          "info": {
+            "name": "Delete member",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{subdomain}.workable.com/spi/v3/members/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete member"
+        },
+        {
+          "info": {
+            "name": "Enable member",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/members/:id/enable",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Enable member"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Recruiters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List recruiters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/recruiters"
+          },
+          "docs": "List recruiters"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs"
+          },
+          "docs": "List jobs"
+        },
+        {
+          "info": {
+            "name": "Get job by shortcode",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job by shortcode"
+        },
+        {
+          "info": {
+            "name": "Get job application form",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/application_form",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job application form"
+        },
+        {
+          "info": {
+            "name": "Get job questions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/questions",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job questions"
+        },
+        {
+          "info": {
+            "name": "Get job custom attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/custom_attributes",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job custom attributes"
+        },
+        {
+          "info": {
+            "name": "Get job members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/members",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job members"
+        },
+        {
+          "info": {
+            "name": "Get job stages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/stages",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job stages"
+        },
+        {
+          "info": {
+            "name": "Get job recruiters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/recruiters",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job recruiters"
+        },
+        {
+          "info": {
+            "name": "Get job activities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/activities",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job activities"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Candidates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create candidate on job",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/candidates",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create candidate on job"
+        },
+        {
+          "info": {
+            "name": "List candidates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates"
+          },
+          "docs": "List candidates"
+        },
+        {
+          "info": {
+            "name": "Get candidate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get candidate"
+        },
+        {
+          "info": {
+            "name": "Update candidate",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update candidate"
+        },
+        {
+          "info": {
+            "name": "Add candidate comment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/comments",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add candidate comment"
+        },
+        {
+          "info": {
+            "name": "Copy candidate",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/copy",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Copy candidate"
+        },
+        {
+          "info": {
+            "name": "Disqualify candidate",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/disqualify",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Disqualify candidate"
+        },
+        {
+          "info": {
+            "name": "Revert candidate disqualification",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/revert",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Revert candidate disqualification"
+        },
+        {
+          "info": {
+            "name": "Move candidate",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/move",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Move candidate"
+        },
+        {
+          "info": {
+            "name": "Relocate candidate",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/relocate",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Relocate candidate"
+        },
+        {
+          "info": {
+            "name": "Add candidate rating",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/ratings",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add candidate rating"
+        },
+        {
+          "info": {
+            "name": "Update candidate rating",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/ratings",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update candidate rating"
+        },
+        {
+          "info": {
+            "name": "Add candidate tags",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/tags",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add candidate tags"
+        },
+        {
+          "info": {
+            "name": "Get candidate activities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/activities",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get candidate activities"
+        },
+        {
+          "info": {
+            "name": "Get candidate files",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/files",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get candidate files"
+        },
+        {
+          "info": {
+            "name": "Get candidate offer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/offer",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get candidate offer"
+        },
+        {
+          "info": {
+            "name": "Update candidate custom attribute value",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/candidates/:id/update_custom_attribute_value",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update candidate custom attribute value"
+        },
+        {
+          "info": {
+            "name": "Add to talent pool",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/talent_pool/candidates"
+          },
+          "docs": "Add to talent pool"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Stages",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List stages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/stages"
+          },
+          "docs": "List stages"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/events"
+          },
+          "docs": "List events"
+        },
+        {
+          "info": {
+            "name": "Get event",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/events/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get event"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Employees",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List employees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees"
+          },
+          "docs": "List employees"
+        },
+        {
+          "info": {
+            "name": "Create employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees"
+          },
+          "docs": "Create employee"
+        },
+        {
+          "info": {
+            "name": "Get employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get employee"
+        },
+        {
+          "info": {
+            "name": "Update employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update employee"
+        },
+        {
+          "info": {
+            "name": "Get organization chart",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees/orgchart"
+          },
+          "docs": "Get organization chart"
+        },
+        {
+          "info": {
+            "name": "List employee documents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees/:id/documents",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List employee documents"
+        },
+        {
+          "info": {
+            "name": "Upload employee document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees/:id/documents",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Upload employee document"
+        },
+        {
+          "info": {
+            "name": "List employee fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/employee_fields"
+          },
+          "docs": "List employee fields"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Offers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get offer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/offers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get offer"
+        },
+        {
+          "info": {
+            "name": "Approve offer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/offers/:id/approve",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Approve offer"
+        },
+        {
+          "info": {
+            "name": "Reject offer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/offers/:id/reject",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Reject offer"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Requisitions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List requisitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions"
+          },
+          "docs": "List requisitions"
+        },
+        {
+          "info": {
+            "name": "Create requisition",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions"
+          },
+          "docs": "Create requisition"
+        },
+        {
+          "info": {
+            "name": "Update requisitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions"
+          },
+          "docs": "Update requisitions"
+        },
+        {
+          "info": {
+            "name": "Get requisition",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions/:code",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get requisition"
+        },
+        {
+          "info": {
+            "name": "Approve requisition",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions/:code/approve",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Approve requisition"
+        },
+        {
+          "info": {
+            "name": "Reject requisition",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions/:code/reject",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Reject requisition"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "ReviewCycles",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List review cycle templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/review-cycles/templates"
+          },
+          "docs": "List review cycle templates"
+        },
+        {
+          "info": {
+            "name": "Create review cycle template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/review-cycles/templates"
+          },
+          "docs": "Create review cycle template"
+        },
+        {
+          "info": {
+            "name": "Get review cycle template",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/review-cycles/templates/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get review cycle template"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TimeTracking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List time entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/time-tracking/time-entries"
+          },
+          "docs": "List time entries"
+        },
+        {
+          "info": {
+            "name": "Create time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/time-tracking/time-entries"
+          },
+          "docs": "Create time entry"
+        },
+        {
+          "info": {
+            "name": "Create employee time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/time-tracking/employees/:id/time-entries",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create employee time entry"
+        },
+        {
+          "info": {
+            "name": "Update employee time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{subdomain}.workable.com/spi/v3/time-tracking/employees/:id/time-entries/:uuid",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "uuid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update employee time entry"
+        },
+        {
+          "info": {
+            "name": "Delete employee time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{subdomain}.workable.com/spi/v3/time-tracking/employees/:id/time-entries/:uuid",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "uuid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete employee time entry"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TimeOff",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List time off requests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/timeoff/requests"
+          },
+          "docs": "List time off requests"
+        },
+        {
+          "info": {
+            "name": "Create time off request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/timeoff/requests"
+          },
+          "docs": "Create time off request"
+        },
+        {
+          "info": {
+            "name": "List time off categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/timeoff/categories"
+          },
+          "docs": "List time off categories"
+        },
+        {
+          "info": {
+            "name": "List time off balances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/timeoff/balances"
+          },
+          "docs": "List time off balances"
+        },
+        {
+          "info": {
+            "name": "Approve time off request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/timeoff/approvals/:key",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Approve time off request"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "CustomAttributes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List custom attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/custom_attributes"
+          },
+          "docs": "List custom attributes"
+        },
+        {
+          "info": {
+            "name": "List disqualification reasons",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/disqualification_reasons"
+          },
+          "docs": "List disqualification reasons"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Subscriptions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/subscriptions"
+          },
+          "docs": "List subscriptions"
+        },
+        {
+          "info": {
+            "name": "Create subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/subscriptions"
+          },
+          "docs": "Create subscription"
+        },
+        {
+          "info": {
+            "name": "Delete subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{subdomain}.workable.com/spi/v3/subscriptions/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete subscription"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
