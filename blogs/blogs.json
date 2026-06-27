@@ -9,6 +9,13 @@
       "method": "feed"
     },
     {
+      "source": "https://workable.statuspage.io/history.atom",
+      "feed_url": "https://workable.statuspage.io/history.atom",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://status.workable.com/",
       "feed_url": "https://workable.statuspage.io/history.atom",
       "title": "",
@@ -17,5 +24,5 @@
     }
   ],
   "post_count": 58,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:03:07Z"
 }
