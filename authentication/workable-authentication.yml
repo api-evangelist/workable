@@ -1,0 +1,15 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/workable-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  description: |-
+    Workable API token authentication using Bearer token in Authorization header.
+    Token types include account tokens, user tokens, and API access tokens.
+  sources:
+  - openapi/workable-openapi.yml

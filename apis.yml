@@ -216,6 +216,12 @@ apis:
       Read-only public endpoint that exposes published jobs for embedding
       job listings on external careers pages without authentication.
 common:
+  - type: TrustCenter
+    url: security/workable-trust-center.yml
+  - type: DomainSecurity
+    url: security/workable-domain-security.yml
+  - type: Authentication
+    url: authentication/workable-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/workable-software
   - type: Website
