@@ -216,6 +216,8 @@ apis:
       Read-only public endpoint that exposes published jobs for embedding
       job listings on external careers pages without authentication.
 common:
+  - type: AgenticAccess
+    url: agentic-access/workable-agentic-access.yml
   - type: TrustCenter
     url: security/workable-trust-center.yml
   - type: DomainSecurity
