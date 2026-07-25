@@ -1,0 +1,81 @@
+openapi: 3.1.0
+info:
+  title: Workable Accounts Offers API
+  description: 'REST API for Workable''s recruiting and HR platform — manage jobs, candidates,
+
+    employees, departments, members, offers, requisitions, time tracking, time off,
+
+    review cycles, and subscriptions.
+
+    '
+  version: 3.21.0
+  contact:
+    name: Workable
+    url: https://workable.readme.io/
+servers:
+- url: https://{subdomain}.workable.com/spi/v3
+  description: Workable API
+  variables:
+    subdomain:
+      default: example
+      description: Workable account subdomain
+security:
+- bearerAuth: []
+tags:
+- name: Offers
+paths:
+  /offers/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Offers
+      summary: Get offer
+      operationId: getOffer
+      responses:
+        '200':
+          description: OK
+  /offers/{id}/approve:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Offers
+      summary: Approve offer
+      operationId: approveOffer
+      responses:
+        '200':
+          description: OK
+  /offers/{id}/reject:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Offers
+      summary: Reject offer
+      operationId: rejectOffer
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Workable API token authentication using Bearer token in Authorization header.
+
+        Token types include account tokens, user tokens, and API access tokens.
+
+        '

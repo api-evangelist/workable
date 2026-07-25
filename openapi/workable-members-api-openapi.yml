@@ -1,0 +1,92 @@
+openapi: 3.1.0
+info:
+  title: Workable Accounts Members API
+  description: 'REST API for Workable''s recruiting and HR platform — manage jobs, candidates,
+
+    employees, departments, members, offers, requisitions, time tracking, time off,
+
+    review cycles, and subscriptions.
+
+    '
+  version: 3.21.0
+  contact:
+    name: Workable
+    url: https://workable.readme.io/
+servers:
+- url: https://{subdomain}.workable.com/spi/v3
+  description: Workable API
+  variables:
+    subdomain:
+      default: example
+      description: Workable account subdomain
+security:
+- bearerAuth: []
+tags:
+- name: Members
+paths:
+  /members:
+    get:
+      tags:
+      - Members
+      summary: List members
+      operationId: listMembers
+      responses:
+        '200':
+          description: OK
+    put:
+      tags:
+      - Members
+      summary: Update members
+      operationId: updateMembers
+      responses:
+        '200':
+          description: OK
+  /members/invite:
+    post:
+      tags:
+      - Members
+      summary: Invite member
+      operationId: inviteMember
+      responses:
+        '201':
+          description: Created
+  /members/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    delete:
+      tags:
+      - Members
+      summary: Delete member
+      operationId: deleteMember
+      responses:
+        '204':
+          description: No Content
+  /members/{id}/enable:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Members
+      summary: Enable member
+      operationId: enableMember
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Workable API token authentication using Bearer token in Authorization header.
+
+        Token types include account tokens, user tokens, and API access tokens.
+
+        '

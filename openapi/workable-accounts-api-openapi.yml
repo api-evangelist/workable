@@ -1,0 +1,96 @@
+openapi: 3.1.0
+info:
+  title: Workable Accounts API
+  description: 'REST API for Workable''s recruiting and HR platform — manage jobs, candidates,
+
+    employees, departments, members, offers, requisitions, time tracking, time off,
+
+    review cycles, and subscriptions.
+
+    '
+  version: 3.21.0
+  contact:
+    name: Workable
+    url: https://workable.readme.io/
+servers:
+- url: https://{subdomain}.workable.com/spi/v3
+  description: Workable API
+  variables:
+    subdomain:
+      default: example
+      description: Workable account subdomain
+security:
+- bearerAuth: []
+tags:
+- name: Accounts
+paths:
+  /accounts:
+    get:
+      tags:
+      - Accounts
+      summary: List accounts
+      operationId: listAccounts
+      responses:
+        '200':
+          description: OK
+  /accounts/{subdomain}:
+    parameters:
+    - in: path
+      name: subdomain
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Accounts
+      summary: Get account by subdomain
+      operationId: getAccount
+      responses:
+        '200':
+          description: OK
+  /collaboration_permissions:
+    get:
+      tags:
+      - Accounts
+      summary: List collaboration permissions
+      operationId: listCollaborationPermissions
+      responses:
+        '200':
+          description: OK
+  /legal_entities:
+    get:
+      tags:
+      - Accounts
+      summary: List legal entities
+      operationId: listLegalEntities
+      responses:
+        '200':
+          description: OK
+  /permission_sets:
+    get:
+      tags:
+      - Accounts
+      summary: List permission sets
+      operationId: listPermissionSets
+      responses:
+        '200':
+          description: OK
+  /work_schedules:
+    get:
+      tags:
+      - Accounts
+      summary: List work schedules
+      operationId: listWorkSchedules
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Workable API token authentication using Bearer token in Authorization header.
+
+        Token types include account tokens, user tokens, and API access tokens.
+
+        '

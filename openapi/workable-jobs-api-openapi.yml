@@ -1,0 +1,165 @@
+openapi: 3.1.0
+info:
+  title: Workable Accounts Jobs API
+  description: 'REST API for Workable''s recruiting and HR platform — manage jobs, candidates,
+
+    employees, departments, members, offers, requisitions, time tracking, time off,
+
+    review cycles, and subscriptions.
+
+    '
+  version: 3.21.0
+  contact:
+    name: Workable
+    url: https://workable.readme.io/
+servers:
+- url: https://{subdomain}.workable.com/spi/v3
+  description: Workable API
+  variables:
+    subdomain:
+      default: example
+      description: Workable account subdomain
+security:
+- bearerAuth: []
+tags:
+- name: Jobs
+paths:
+  /jobs:
+    get:
+      tags:
+      - Jobs
+      summary: List jobs
+      operationId: listJobs
+      responses:
+        '200':
+          description: OK
+  /jobs/{shortcode}:
+    parameters:
+    - in: path
+      name: shortcode
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Jobs
+      summary: Get job by shortcode
+      operationId: getJob
+      responses:
+        '200':
+          description: OK
+  /jobs/{shortcode}/application_form:
+    parameters:
+    - in: path
+      name: shortcode
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Jobs
+      summary: Get job application form
+      operationId: getJobApplicationForm
+      responses:
+        '200':
+          description: OK
+  /jobs/{shortcode}/questions:
+    parameters:
+    - in: path
+      name: shortcode
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Jobs
+      summary: Get job questions
+      operationId: getJobQuestions
+      responses:
+        '200':
+          description: OK
+  /jobs/{shortcode}/custom_attributes:
+    parameters:
+    - in: path
+      name: shortcode
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Jobs
+      summary: Get job custom attributes
+      operationId: getJobCustomAttributes
+      responses:
+        '200':
+          description: OK
+  /jobs/{shortcode}/members:
+    parameters:
+    - in: path
+      name: shortcode
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Jobs
+      summary: Get job members
+      operationId: getJobMembers
+      responses:
+        '200':
+          description: OK
+  /jobs/{shortcode}/stages:
+    parameters:
+    - in: path
+      name: shortcode
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Jobs
+      summary: Get job stages
+      operationId: getJobStages
+      responses:
+        '200':
+          description: OK
+  /jobs/{shortcode}/recruiters:
+    parameters:
+    - in: path
+      name: shortcode
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Jobs
+      summary: Get job recruiters
+      operationId: getJobRecruiters
+      responses:
+        '200':
+          description: OK
+  /jobs/{shortcode}/activities:
+    parameters:
+    - in: path
+      name: shortcode
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Jobs
+      summary: Get job activities
+      operationId: getJobActivities
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Workable API token authentication using Bearer token in Authorization header.
+
+        Token types include account tokens, user tokens, and API access tokens.
+
+        '

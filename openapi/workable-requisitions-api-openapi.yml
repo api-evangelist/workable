@@ -1,0 +1,106 @@
+openapi: 3.1.0
+info:
+  title: Workable Accounts Requisitions API
+  description: 'REST API for Workable''s recruiting and HR platform — manage jobs, candidates,
+
+    employees, departments, members, offers, requisitions, time tracking, time off,
+
+    review cycles, and subscriptions.
+
+    '
+  version: 3.21.0
+  contact:
+    name: Workable
+    url: https://workable.readme.io/
+servers:
+- url: https://{subdomain}.workable.com/spi/v3
+  description: Workable API
+  variables:
+    subdomain:
+      default: example
+      description: Workable account subdomain
+security:
+- bearerAuth: []
+tags:
+- name: Requisitions
+paths:
+  /requisitions:
+    get:
+      tags:
+      - Requisitions
+      summary: List requisitions
+      operationId: listRequisitions
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+      - Requisitions
+      summary: Create requisition
+      operationId: createRequisition
+      responses:
+        '201':
+          description: Created
+    patch:
+      tags:
+      - Requisitions
+      summary: Update requisitions
+      operationId: patchRequisitions
+      responses:
+        '200':
+          description: OK
+  /requisitions/{code}:
+    parameters:
+    - in: path
+      name: code
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Requisitions
+      summary: Get requisition
+      operationId: getRequisition
+      responses:
+        '200':
+          description: OK
+  /requisitions/{code}/approve:
+    parameters:
+    - in: path
+      name: code
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Requisitions
+      summary: Approve requisition
+      operationId: approveRequisition
+      responses:
+        '200':
+          description: OK
+  /requisitions/{code}/reject:
+    parameters:
+    - in: path
+      name: code
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - Requisitions
+      summary: Reject requisition
+      operationId: rejectRequisition
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Workable API token authentication using Bearer token in Authorization header.
+
+        Token types include account tokens, user tokens, and API access tokens.
+
+        '

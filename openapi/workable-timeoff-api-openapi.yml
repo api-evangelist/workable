@@ -1,0 +1,86 @@
+openapi: 3.1.0
+info:
+  title: Workable Accounts TimeOff API
+  description: 'REST API for Workable''s recruiting and HR platform — manage jobs, candidates,
+
+    employees, departments, members, offers, requisitions, time tracking, time off,
+
+    review cycles, and subscriptions.
+
+    '
+  version: 3.21.0
+  contact:
+    name: Workable
+    url: https://workable.readme.io/
+servers:
+- url: https://{subdomain}.workable.com/spi/v3
+  description: Workable API
+  variables:
+    subdomain:
+      default: example
+      description: Workable account subdomain
+security:
+- bearerAuth: []
+tags:
+- name: TimeOff
+paths:
+  /timeoff/requests:
+    get:
+      tags:
+      - TimeOff
+      summary: List time off requests
+      operationId: listTimeOffRequests
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+      - TimeOff
+      summary: Create time off request
+      operationId: createTimeOffRequest
+      responses:
+        '201':
+          description: Created
+  /timeoff/categories:
+    get:
+      tags:
+      - TimeOff
+      summary: List time off categories
+      operationId: listTimeOffCategories
+      responses:
+        '200':
+          description: OK
+  /timeoff/balances:
+    get:
+      tags:
+      - TimeOff
+      summary: List time off balances
+      operationId: listTimeOffBalances
+      responses:
+        '200':
+          description: OK
+  /timeoff/approvals/{key}:
+    parameters:
+    - in: path
+      name: key
+      required: true
+      schema:
+        type: string
+    post:
+      tags:
+      - TimeOff
+      summary: Approve time off request
+      operationId: approveTimeOff
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Workable API token authentication using Bearer token in Authorization header.
+
+        Token types include account tokens, user tokens, and API access tokens.
+
+        '
