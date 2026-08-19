@@ -1,0 +1,97 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Workable Accounts API",
+    "version": "3.21.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Accounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/accounts"
+          },
+          "docs": "List accounts"
+        },
+        {
+          "info": {
+            "name": "Get account by subdomain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/accounts/:subdomain",
+            "params": [
+              {
+                "name": "subdomain",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get account by subdomain"
+        },
+        {
+          "info": {
+            "name": "List collaboration permissions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/collaboration_permissions"
+          },
+          "docs": "List collaboration permissions"
+        },
+        {
+          "info": {
+            "name": "List legal entities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/legal_entities"
+          },
+          "docs": "List legal entities"
+        },
+        {
+          "info": {
+            "name": "List permission sets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/permission_sets"
+          },
+          "docs": "List permission sets"
+        },
+        {
+          "info": {
+            "name": "List work schedules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/work_schedules"
+          },
+          "docs": "List work schedules"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

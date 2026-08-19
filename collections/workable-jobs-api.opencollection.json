@@ -1,0 +1,179 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Workable Accounts Jobs API",
+    "version": "3.21.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Jobs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List jobs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs"
+          },
+          "docs": "List jobs"
+        },
+        {
+          "info": {
+            "name": "Get job by shortcode",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job by shortcode"
+        },
+        {
+          "info": {
+            "name": "Get job application form",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/application_form",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job application form"
+        },
+        {
+          "info": {
+            "name": "Get job questions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/questions",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job questions"
+        },
+        {
+          "info": {
+            "name": "Get job custom attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/custom_attributes",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job custom attributes"
+        },
+        {
+          "info": {
+            "name": "Get job members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/members",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job members"
+        },
+        {
+          "info": {
+            "name": "Get job stages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/stages",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job stages"
+        },
+        {
+          "info": {
+            "name": "Get job recruiters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/recruiters",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job recruiters"
+        },
+        {
+          "info": {
+            "name": "Get job activities",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/jobs/:shortcode/activities",
+            "params": [
+              {
+                "name": "shortcode",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get job activities"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,140 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Workable Accounts Employees API",
+    "version": "3.21.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Employees",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List employees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees"
+          },
+          "docs": "List employees"
+        },
+        {
+          "info": {
+            "name": "Create employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees"
+          },
+          "docs": "Create employee"
+        },
+        {
+          "info": {
+            "name": "Get employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get employee"
+        },
+        {
+          "info": {
+            "name": "Update employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update employee"
+        },
+        {
+          "info": {
+            "name": "Get organization chart",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees/orgchart"
+          },
+          "docs": "Get organization chart"
+        },
+        {
+          "info": {
+            "name": "List employee documents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees/:id/documents",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List employee documents"
+        },
+        {
+          "info": {
+            "name": "Upload employee document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/employees/:id/documents",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Upload employee document"
+        },
+        {
+          "info": {
+            "name": "List employee fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/employee_fields"
+          },
+          "docs": "List employee fields"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

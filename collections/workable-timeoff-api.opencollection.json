@@ -1,0 +1,86 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Workable Accounts TimeOff API",
+    "version": "3.21.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TimeOff",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List time off requests",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/timeoff/requests"
+          },
+          "docs": "List time off requests"
+        },
+        {
+          "info": {
+            "name": "Create time off request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/timeoff/requests"
+          },
+          "docs": "Create time off request"
+        },
+        {
+          "info": {
+            "name": "List time off categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/timeoff/categories"
+          },
+          "docs": "List time off categories"
+        },
+        {
+          "info": {
+            "name": "List time off balances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/timeoff/balances"
+          },
+          "docs": "List time off balances"
+        },
+        {
+          "info": {
+            "name": "Approve time off request",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/timeoff/approvals/:key",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Approve time off request"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

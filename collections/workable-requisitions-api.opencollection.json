@@ -1,0 +1,111 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Workable Accounts Requisitions API",
+    "version": "3.21.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Requisitions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List requisitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions"
+          },
+          "docs": "List requisitions"
+        },
+        {
+          "info": {
+            "name": "Create requisition",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions"
+          },
+          "docs": "Create requisition"
+        },
+        {
+          "info": {
+            "name": "Update requisitions",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions"
+          },
+          "docs": "Update requisitions"
+        },
+        {
+          "info": {
+            "name": "Get requisition",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions/:code",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get requisition"
+        },
+        {
+          "info": {
+            "name": "Approve requisition",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions/:code/approve",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Approve requisition"
+        },
+        {
+          "info": {
+            "name": "Reject requisition",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/requisitions/:code/reject",
+            "params": [
+              {
+                "name": "code",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Reject requisition"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

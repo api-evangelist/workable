@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Workable Accounts CustomAttributes API",
+    "version": "3.21.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CustomAttributes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List custom attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/custom_attributes"
+          },
+          "docs": "List custom attributes"
+        },
+        {
+          "info": {
+            "name": "List disqualification reasons",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/disqualification_reasons"
+          },
+          "docs": "List disqualification reasons"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

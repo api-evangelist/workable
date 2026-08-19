@@ -1,0 +1,110 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Workable Accounts TimeTracking API",
+    "version": "3.21.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TimeTracking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List time entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/time-tracking/time-entries"
+          },
+          "docs": "List time entries"
+        },
+        {
+          "info": {
+            "name": "Create time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/time-tracking/time-entries"
+          },
+          "docs": "Create time entry"
+        },
+        {
+          "info": {
+            "name": "Create employee time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{subdomain}.workable.com/spi/v3/time-tracking/employees/:id/time-entries",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create employee time entry"
+        },
+        {
+          "info": {
+            "name": "Update employee time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{subdomain}.workable.com/spi/v3/time-tracking/employees/:id/time-entries/:uuid",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "uuid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update employee time entry"
+        },
+        {
+          "info": {
+            "name": "Delete employee time entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{subdomain}.workable.com/spi/v3/time-tracking/employees/:id/time-entries/:uuid",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "uuid",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete employee time entry"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

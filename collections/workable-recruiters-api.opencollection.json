@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Workable Accounts Recruiters API",
+    "version": "3.21.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Recruiters",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List recruiters",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{subdomain}.workable.com/spi/v3/recruiters"
+          },
+          "docs": "List recruiters"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
