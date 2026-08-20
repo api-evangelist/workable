@@ -28,6 +28,14 @@ tags:
   - Sourcing
   - Video Interviews
   - Assessments
+  - Software-as-a-Service
+tags_raw:
+  - HR
+  - ATS
+  - Recruiting
+  - Sourcing
+  - Video Interviews
+  - Assessments
   - SaaS
 created: '2026-05-08'
 modified: '2026-05-08'
@@ -36,6 +44,9 @@ apis:
 - aid: workable:workable-jobs-api
   name: Workable Jobs API
   tags:
+  - Job
+  - Postings
+  tags_raw:
   - Jobs
   - Postings
   properties:
@@ -73,6 +84,10 @@ apis:
 - aid: workable:workable-members-api
   name: Workable Members API
   tags:
+  - Members
+  - Recruiters
+  - User
+  tags_raw:
   - Members
   - Recruiters
   - Users
@@ -186,6 +201,10 @@ apis:
 - aid: workable:workable-events-api
   name: Workable Events API
   tags:
+  - Event
+  - Interviews
+  - Scheduling
+  tags_raw:
   - Events
   - Interviews
   - Scheduling
@@ -198,6 +217,9 @@ apis:
 - aid: workable:workable-webhooks-api
   name: Workable Webhooks API
   tags:
+  - Webhook
+  - Subscription
+  tags_raw:
   - Webhooks
   - Subscriptions
   properties:
@@ -209,6 +231,9 @@ apis:
 - aid: workable:workable-public-jobs-api
   name: Workable Public Jobs API
   tags:
+  - Job
+  - Public
+  tags_raw:
   - Jobs
   - Public
   properties:
@@ -221,6 +246,8 @@ apis:
   name: Workable Accounts API
   description: The Accounts API from Workable — 6 operation(s) for accounts.
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -237,6 +264,8 @@ apis:
   name: Workable CustomAttributes API
   description: The CustomAttributes API from Workable — 2 operation(s) for customattributes.
   tags:
+  - Custom Attributes
+  tags_raw:
   - CustomAttributes
   properties:
   - type: OpenAPI
@@ -261,6 +290,8 @@ apis:
   name: Workable Events API
   description: The Events API from Workable — 2 operation(s) for events.
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
@@ -269,6 +300,8 @@ apis:
   name: Workable Jobs API
   description: The Jobs API from Workable — 9 operation(s) for jobs.
   tags:
+  - Job
+  tags_raw:
   - Jobs
   properties:
   - type: OpenAPI
@@ -309,6 +342,8 @@ apis:
   name: Workable ReviewCycles API
   description: The ReviewCycles API from Workable — 2 operation(s) for reviewcycles.
   tags:
+  - Review Cycles
+  tags_raw:
   - ReviewCycles
   properties:
   - type: OpenAPI
@@ -325,6 +360,8 @@ apis:
   name: Workable Subscriptions API
   description: The Subscriptions API from Workable — 2 operation(s) for subscriptions.
   tags:
+  - Subscription
+  tags_raw:
   - Subscriptions
   properties:
   - type: OpenAPI
@@ -333,6 +370,8 @@ apis:
   name: Workable TimeOff API
   description: The TimeOff API from Workable — 4 operation(s) for timeoff.
   tags:
+  - Time Off
+  tags_raw:
   - TimeOff
   properties:
   - type: OpenAPI
@@ -341,6 +380,8 @@ apis:
   name: Workable TimeTracking API
   description: The TimeTracking API from Workable — 3 operation(s) for timetracking.
   tags:
+  - Time Tracking
+  tags_raw:
   - TimeTracking
   properties:
   - type: OpenAPI
