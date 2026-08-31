@@ -276,7 +276,7 @@ apis:
   name: Workable CustomAttributes API
   description: The CustomAttributes API from Workable — 2 operation(s) for customattributes.
   tags:
-  - Custom Attributes
+  - CustomAttributes
   tags_raw:
   - CustomAttributes
   properties:
@@ -354,7 +354,7 @@ apis:
   name: Workable ReviewCycles API
   description: The ReviewCycles API from Workable — 2 operation(s) for reviewcycles.
   tags:
-  - Review Cycles
+  - ReviewCycles
   tags_raw:
   - ReviewCycles
   properties:
@@ -382,7 +382,7 @@ apis:
   name: Workable TimeOff API
   description: The TimeOff API from Workable — 4 operation(s) for timeoff.
   tags:
-  - Time Off
+  - TimeOff
   tags_raw:
   - TimeOff
   properties:
