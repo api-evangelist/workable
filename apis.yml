@@ -273,16 +273,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/workable-candidates-api-openapi.yml
-- aid: workable:workable-customattributes-api
-  name: Workable CustomAttributes API
-  description: The CustomAttributes API from Workable — 2 operation(s) for customattributes.
-  tags:
-  - Custom Attributes
-  tags_raw:
-  - CustomAttributes
-  properties:
-  - type: OpenAPI
-    url: openapi/workable-customattributes-api-openapi.yml
 - aid: workable:workable-departments-api
   name: Workable Departments API
   description: The Departments API from Workable — 3 operation(s) for departments.
@@ -351,16 +341,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/workable-requisitions-api-openapi.yml
-- aid: workable:workable-reviewcycles-api
-  name: Workable ReviewCycles API
-  description: The ReviewCycles API from Workable — 2 operation(s) for reviewcycles.
-  tags:
-  - Review Cycles
-  tags_raw:
-  - ReviewCycles
-  properties:
-  - type: OpenAPI
-    url: openapi/workable-reviewcycles-api-openapi.yml
 - aid: workable:workable-stages-api
   name: Workable Stages API
   description: The Stages API from Workable — 1 operation(s) for stages.
@@ -379,26 +359,38 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/workable-subscriptions-api-openapi.yml
-- aid: workable:workable-timeoff-api
-  name: Workable TimeOff API
-  description: The TimeOff API from Workable — 4 operation(s) for timeoff.
+- aid: workable:workable-custom-attributes-api
+  name: Workable Custom Attributes API
+  description: The Custom Attributes API from Workable — 2 operation(s) for custom attributes.
+  tags:
+  - Custom Attributes
+  properties:
+  - type: OpenAPI
+    url: openapi/workable-custom-attributes-api-openapi.yml
+- aid: workable:workable-review-cycles-api
+  name: Workable Review Cycles API
+  description: The Review Cycles API from Workable — 2 operation(s) for review cycles.
+  tags:
+  - Review Cycles
+  properties:
+  - type: OpenAPI
+    url: openapi/workable-review-cycles-api-openapi.yml
+- aid: workable:workable-time-off-api
+  name: Workable Time Off API
+  description: The Time Off API from Workable — 4 operation(s) for time off.
   tags:
   - Time Off
-  tags_raw:
-  - TimeOff
   properties:
   - type: OpenAPI
-    url: openapi/workable-timeoff-api-openapi.yml
-- aid: workable:workable-timetracking-api
-  name: Workable TimeTracking API
-  description: The TimeTracking API from Workable — 3 operation(s) for timetracking.
+    url: openapi/workable-time-off-api-openapi.yml
+- aid: workable:workable-time-tracking-api
+  name: Workable Time Tracking API
+  description: The Time Tracking API from Workable — 3 operation(s) for time tracking.
   tags:
   - Time Tracking
-  tags_raw:
-  - TimeTracking
   properties:
   - type: OpenAPI
-    url: openapi/workable-timetracking-api-openapi.yml
+    url: openapi/workable-time-tracking-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/workable-agentic-access.yml
