@@ -1,13 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Workable Accounts CustomAttributes API
+  title: Workable Custom Attributes API
   description: 'REST API for Workable''s recruiting and HR platform — manage jobs, candidates,
 
     employees, departments, members, offers, requisitions, time tracking, time off,
 
-    review cycles, and subscriptions.
-
-    '
+    review cycles, and subscriptions.'
   version: 3.21.0
   contact:
     name: Workable
@@ -22,12 +20,12 @@ servers:
 security:
 - bearerAuth: []
 tags:
-- name: CustomAttributes
+- name: Custom Attributes
 paths:
   /custom_attributes:
     get:
       tags:
-      - CustomAttributes
+      - Custom Attributes
       summary: List custom attributes
       operationId: listCustomAttributes
       responses:
@@ -36,7 +34,7 @@ paths:
   /disqualification_reasons:
     get:
       tags:
-      - CustomAttributes
+      - Custom Attributes
       summary: List disqualification reasons
       operationId: listDisqualificationReasons
       responses:

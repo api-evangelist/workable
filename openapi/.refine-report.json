@@ -1,22 +1,7 @@
 {
   "provider": "workable",
   "sources": [
-    "workable-accounts-api-openapi.yml",
-    "workable-candidates-api-openapi.yml",
-    "workable-customattributes-api-openapi.yml",
-    "workable-departments-api-openapi.yml",
-    "workable-employees-api-openapi.yml",
-    "workable-events-api-openapi.yml",
-    "workable-jobs-api-openapi.yml",
-    "workable-members-api-openapi.yml",
-    "workable-offers-api-openapi.yml",
-    "workable-recruiters-api-openapi.yml",
-    "workable-requisitions-api-openapi.yml",
-    "workable-reviewcycles-api-openapi.yml",
-    "workable-stages-api-openapi.yml",
-    "workable-subscriptions-api-openapi.yml",
-    "workable-timeoff-api-openapi.yml",
-    "workable-timetracking-api-openapi.yml"
+    "_original/workable-openapi.yml"
   ],
   "outputs": [
     "workable-accounts-api-openapi.yml",
@@ -36,9 +21,33 @@
     "workable-timeoff-api-openapi.yml",
     "workable-timetracking-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 4 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "workable-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: workable-custom-attributes-api-openapi.yml, workable-review-cycles-api-openapi.yml, workable-time-off-api-openapi.yml, workable-time-tracking-api-openapi.yml",
+    "apis.yml register: written (+4 apis, 33 total)"
+  ],
+  "skipped": [
+    "workable-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-candidates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-custom-attributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-departments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-employees-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-jobs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-members-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-offers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-recruiters-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-requisitions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-review-cycles-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-stages-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-subscriptions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-time-off-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "workable-time-tracking-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

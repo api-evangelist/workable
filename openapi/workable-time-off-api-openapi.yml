@@ -1,13 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Workable Accounts TimeOff API
+  title: Workable Time Off API
   description: 'REST API for Workable''s recruiting and HR platform — manage jobs, candidates,
 
     employees, departments, members, offers, requisitions, time tracking, time off,
 
-    review cycles, and subscriptions.
-
-    '
+    review cycles, and subscriptions.'
   version: 3.21.0
   contact:
     name: Workable
@@ -22,12 +20,12 @@ servers:
 security:
 - bearerAuth: []
 tags:
-- name: TimeOff
+- name: Time Off
 paths:
   /timeoff/requests:
     get:
       tags:
-      - TimeOff
+      - Time Off
       summary: List time off requests
       operationId: listTimeOffRequests
       responses:
@@ -35,7 +33,7 @@ paths:
           description: OK
     post:
       tags:
-      - TimeOff
+      - Time Off
       summary: Create time off request
       operationId: createTimeOffRequest
       responses:
@@ -44,7 +42,7 @@ paths:
   /timeoff/categories:
     get:
       tags:
-      - TimeOff
+      - Time Off
       summary: List time off categories
       operationId: listTimeOffCategories
       responses:
@@ -53,7 +51,7 @@ paths:
   /timeoff/balances:
     get:
       tags:
-      - TimeOff
+      - Time Off
       summary: List time off balances
       operationId: listTimeOffBalances
       responses:
@@ -68,7 +66,7 @@ paths:
         type: string
     post:
       tags:
-      - TimeOff
+      - Time Off
       summary: Approve time off request
       operationId: approveTimeOff
       responses:

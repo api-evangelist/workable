@@ -1,13 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Workable Accounts Candidates API
+  title: Workable Candidates API
   description: 'REST API for Workable''s recruiting and HR platform — manage jobs, candidates,
 
     employees, departments, members, offers, requisitions, time tracking, time off,
 
-    review cycles, and subscriptions.
-
-    '
+    review cycles, and subscriptions.'
   version: 3.21.0
   contact:
     name: Workable
