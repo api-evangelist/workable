@@ -30,7 +30,7 @@
     "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "workable-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "superseded outputs removed: workable-custom-attributes-api-openapi.yml, workable-review-cycles-api-openapi.yml, workable-time-off-api-openapi.yml, workable-time-tracking-api-openapi.yml",
-    "apis.yml register: written (+4 apis, 33 total)"
+    "apis.yml register: written (+4 apis, 24 total)"
   ],
   "skipped": [
     "workable-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
