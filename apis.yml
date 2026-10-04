@@ -347,6 +347,9 @@ apis:
   - type: Documentation
     url: https://workable.readme.io/
 common:
+  - type: CapabilityMap
+    url: capabilities/workable-capability-edges.yml
+    name: Workable Business Capability Map
   - type: AgenticAccess
     url: agentic-access/workable-agentic-access.yml
   - type: TrustCenter

@@ -1,0 +1,90 @@
+slug: workable
+provider: Workable
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 8
+edges:
+- tag: Candidates
+  spec_file: workable-candidates-api-openapi.yml
+  capability_id: BC-300.10
+  capability_id_l1: BC-300
+  capability_name: Talent Acquisition Management
+  confidence: 0.95
+  evidence: POST /candidates/{id}/disqualify  Disqualify candidate; POST /candidates/{id}/move  Move candidate;
+    POST /candidates/{id}/ratings  Add candidate rating
+  reason: Full applicant-tracking candidate lifecycle (create on job, move through stages, rate, disqualify)
+    is plainly recruiting/talent acquisition.
+- tag: Jobs
+  spec_file: workable-jobs-api-openapi.yml
+  capability_id: BC-300.10
+  capability_id_l1: BC-300
+  capability_name: Talent Acquisition Management
+  confidence: 0.9
+  evidence: GET /jobs/{shortcode}/application_form  Get job application form; GET /jobs/{shortcode}/stages  Get
+    job stages; GET /jobs/{shortcode}/recruiters
+  reason: Job requisitions with application forms, hiring stages and recruiters are the core of recruiting
+    and hiring, i.e. talent acquisition.
+- tag: Offers
+  spec_file: workable-offers-api-openapi.yml
+  capability_id: BC-300.10
+  capability_id_l1: BC-300
+  capability_name: Talent Acquisition Management
+  confidence: 0.9
+  evidence: POST /offers/{id}/approve approveOffer; POST /offers/{id}/reject rejectOffer
+  reason: Job offer retrieval and approval/rejection in an ATS is squarely the hiring portion of Talent
+    Acquisition Management.
+- tag: Requisitions
+  spec_file: workable-requisitions-api-openapi.yml
+  capability_id: BC-300.10
+  capability_id_l1: BC-300
+  capability_name: Talent Acquisition Management
+  confidence: 0.88
+  evidence: POST /requisitions createRequisition; POST /requisitions/{code}/approve approveRequisition
+  reason: Job requisition creation and approval workflow is the demand-intake step of recruiting/hiring,
+    i.e. Talent Acquisition Management.
+- tag: Employees
+  spec_file: workable-employees-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.85
+  evidence: GET /employees/orgchart  Get organization chart; POST /employees/{id}/documents  Upload employee
+    document
+  reason: Employee master records, org chart and employee document management are core HR operations/employee
+    record keeping.
+- tag: Review Cycles
+  spec_file: workable-review-cycles-api-openapi.yml
+  capability_id: BC-300.20
+  capability_id_l1: BC-300
+  capability_name: Talent Management
+  confidence: 0.8
+  evidence: POST /review-cycles/templates createReviewCycleTemplate List review cycle templates
+  reason: Performance review cycle templates in the HR side of the platform correspond to performance/talent
+    management, not recruiting.
+- tag: Time Off
+  spec_file: workable-time-off-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.78
+  evidence: GET /timeoff/balances listTimeOffBalances; POST /timeoff/approvals/{key} approveTimeOff
+  reason: Leave request capture, categories, balances and approvals are core HR administrative service
+    delivery (absence administration) within HR Operations.
+- tag: Time Tracking
+  spec_file: workable-time-tracking-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.75
+  evidence: POST /time-tracking/employees/{id}/time-entries createEmployeeTimeEntry
+  reason: Employee time entry capture and maintenance is HR operational administration (timekeeping feeding
+    payroll/records).
