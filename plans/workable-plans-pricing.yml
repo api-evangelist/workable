@@ -159,3 +159,71 @@ plans:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - subscription
+  units:
+  - feature
+  - period
+  plans:
+  - name: Standard
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - period
+    periods:
+    - month
+    - year
+  - name: Premier
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - period
+    periods:
+    - month
+    - year
+  - name: Enterprise
+    access: other
+    model: subscription
+    model_how: stated
+    units:
+    - period
+    periods:
+    - month
+    - year
+  - name: Texting+ Add-On
+    access: addon
+    model: subscription
+    model_how: derived
+    units:
+    - feature
+    periods:
+    - month
+  - name: Video Interviews+ Add-On
+    access: addon
+    model: subscription
+    model_how: derived
+    units:
+    - feature
+    periods:
+    - month
+  - name: Assessments+ Add-On
+    access: addon
+    model: subscription
+    model_how: derived
+    units:
+    - feature
+    periods:
+    - month
+  - name: Performance Reviews+ Add-On
+    access: addon
+    model: subscription
+    model_how: derived
+    units:
+    - feature
+    periods:
+    - month
