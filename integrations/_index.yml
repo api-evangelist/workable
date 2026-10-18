@@ -101,7 +101,7 @@
     - alpha
     in_cloud: true
     builder: unknown (community connector; contributor not in the record)
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: workable-fivetran
   label: Fivetran
@@ -127,7 +127,7 @@
     - connectors/applications/workable
     vendor_link: https://ps.workable.com/fivetran
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: workable-slack-own
   label: Slack (own)
