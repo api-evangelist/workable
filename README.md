@@ -1,4 +1,4 @@
-# Workable (workable)
+# Workable
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,304 +66,160 @@
 
 Workable is an end-to-end hiring platform with ATS, AI sourcing, employer branding, video interviewing, assessments, and HR. The Workable REST API (v3) exposes jobs, candidates, stages, members, departments, custom attributes, offers, assessments, and webhooks.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/workable/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/workable/refs/heads/main/apis.yml)
+**Areas:** Human Resources · Applicant Tracking · Recruiting · Sourcing · Video Interviews · Assessment · Software-as-a-Service
 
-## Tags
+## Workable on APIs.io
 
-- HR
-- ATS
-- Recruiting
-- Sourcing
-- Video Interviews
-- Assessments
-- SaaS
+Everything profiled for Workable is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/workable/](https://apis.io/providers/workable/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (24)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-08
+- [Workable Activities API](https://apis.io/apis/workable/workable-activities-api/) — Read activity-log entries for candidates and jobs (stage moves, comments, evaluations) for audit and integration use cases.
+- [Workable Comments API](https://apis.io/apis/workable/workable-comments-api/) — Add and read free-form comments and @-mentions on candidate profiles for collaboration with hiring teams.
+- [Workable Evaluations API](https://apis.io/apis/workable/workable-evaluations-api/) — Submit and read interviewer evaluations and scorecards aligned to the job's interview kit.
+- [Workable Assessments API](https://apis.io/apis/workable/workable-assessments-api/) — Trigger and read candidate assessments delivered through Workable's assessment platform (Assessments+).
+- [Workable Disqualification Reasons API](https://apis.io/apis/workable/workable-disqualification-reasons-api/) — List configured disqualification reasons used when rejecting a candidate (not a fit, withdrew, declined offer, hired elsewhere).
+- [Workable Questions API](https://apis.io/apis/workable/workable-questions-api/) — Manage application form questions per job, including knockout questions and EEO surveys.
+- [Workable Webhooks API](https://apis.io/apis/workable/workable-webhooks-api/) — Subscribe to Workable events (candidate.created, candidate.moved, candidate.hired, candidate.disqualified, member.created) for downstream automation.
+- [Workable Public Jobs API](https://apis.io/apis/workable/workable-public-jobs-api/) — Read-only public endpoint that exposes published jobs for embedding job listings on external careers pages without authentication.
+- [Workable Accounts API](https://apis.io/apis/workable/workable-accounts-api/) — The Accounts API from Workable — 6 operation(s) for accounts.
+- [Workable Candidates API](https://apis.io/apis/workable/workable-candidates-api/) — Create candidates from external sources, retrieve candidate profiles, and update profile data, resumes, cover letters, and source attribution.
+- [Workable Departments API](https://apis.io/apis/workable/workable-departments-api/) — Read the company's department list used to scope job postings and reporting.
+- [Workable Employees API](https://apis.io/apis/workable/workable-employees-api/) — The Employees API from Workable — 5 operation(s) for employees.
+- [Workable Events API](https://apis.io/apis/workable/workable-events-api/) — Read and create scheduled events (phone screens, interviews) for a candidate, integrated with Workable's calendar sync.
+- [Workable Jobs API](https://apis.io/apis/workable/workable-jobs-api/) — Create, read, update, and publish job postings. Jobs are the core organizing entity in Workable; pipelines, candidates, members, and activities are scoped…
+- [Workable Members API](https://apis.io/apis/workable/workable-members-api/) — Manage Workable team members, recruiter accounts, and the per-job collaborators (hiring managers, interviewers, reviewers).
+- [Workable Offers API](https://apis.io/apis/workable/workable-offers-api/) — Generate and track offers including templates, compensation breakdowns, and offer letter PDFs.
+- [Workable Recruiters API](https://apis.io/apis/workable/workable-recruiters-api/) — Manage external agency recruiters who can submit candidates against Workable jobs.
+- [Workable Requisitions API](https://apis.io/apis/workable/workable-requisitions-api/) — The Requisitions API from Workable — 4 operation(s) for requisitions.
+- [Workable Stages API](https://apis.io/apis/workable/workable-stages-api/) — Read pipeline stages configured for a job and move candidates between stages (sourced, applied, phone screen, interview, offer, hired).
+- [Workable Subscriptions API](https://apis.io/apis/workable/workable-subscriptions-api/) — The Subscriptions API from Workable — 2 operation(s) for subscriptions.
+- [Workable Custom Attributes API](https://apis.io/apis/workable/workable-custom-attributes-api/) — The Custom Attributes API from Workable — 2 operation(s) for custom attributes.
+- [Workable Review Cycles API](https://apis.io/apis/workable/workable-review-cycles-api/) — The Review Cycles API from Workable — 2 operation(s) for review cycles.
+- [Workable Time Off API](https://apis.io/apis/workable/workable-time-off-api/) — The Time Off API from Workable — 4 operation(s) for time off.
+- [Workable Time Tracking API](https://apis.io/apis/workable/workable-time-tracking-api/) — The Time Tracking API from Workable — 3 operation(s) for time tracking.
 
-## APIs
+### Published properties
 
-### Workable Jobs API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Create, read, update, and publish job postings. Jobs are the core organizing entity in Workable; pipelines, candidates, members, and activities are scoped to a job shortcode.
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- Jobs
-- Postings
+- [Workable Agentic Access](https://apis.io/agentic-access/workable/workable-agentic-access/)
 
-#### Properties
+#### Collections (16)
 
-- [Documentation](https://workable.readme.io/)
-- [API Reference](https://workable.readme.io/reference)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-### Workable Candidates API
+- [Workable API](https://apis.io/collections/workable/open-workable/)
+- [Workable Accounts API](https://apis.io/collections/workable/open-workable-accounts-api/)
+- [Workable Accounts Candidates API](https://apis.io/collections/workable/open-workable-candidates-api/)
+- [Workable Accounts CustomAttributes API](https://apis.io/collections/workable/open-workable-customattributes-api/)
+- [Workable Accounts Departments API](https://apis.io/collections/workable/open-workable-departments-api/)
+- [Workable Accounts Employees API](https://apis.io/collections/workable/open-workable-employees-api/)
+- [Workable Accounts Events API](https://apis.io/collections/workable/open-workable-events-api/)
+- [Workable Accounts Jobs API](https://apis.io/collections/workable/open-workable-jobs-api/)
+- [Workable Accounts Members API](https://apis.io/collections/workable/open-workable-members-api/)
+- [Workable Accounts Offers API](https://apis.io/collections/workable/open-workable-offers-api/)
+- [Workable Accounts Recruiters API](https://apis.io/collections/workable/open-workable-recruiters-api/)
+- [Workable Accounts Requisitions API](https://apis.io/collections/workable/open-workable-requisitions-api/)
+- [Workable Accounts Stages API](https://apis.io/collections/workable/open-workable-stages-api/)
+- [Workable Accounts Subscriptions API](https://apis.io/collections/workable/open-workable-subscriptions-api/)
+- [Workable Accounts TimeOff API](https://apis.io/collections/workable/open-workable-timeoff-api/)
+- [Workable Accounts TimeTracking API](https://apis.io/collections/workable/open-workable-timetracking-api/)
 
-Create candidates from external sources, retrieve candidate profiles, and update profile data, resumes, cover letters, and source attribution.
+#### Security (3)
 
-#### Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Candidates
-- Applicants
+- [Workable Authentication](https://apis.io/security/workable/workable-authentication/)
+- [Workable Domain Security](https://apis.io/security/workable/workable-domain-security/)
+- [Workable Trust Center](https://apis.io/security/workable/workable-trust-center/)
 
-#### Properties
+#### Plans and pricing (1)
 
-- [Documentation](https://workable.readme.io/)
-- [API Reference](https://workable.readme.io/reference)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Published plans, tiers and prices.
 
-### Workable Stages API
+- [Workable Plans Pricing](https://apis.io/plans/workable/workable-plans-pricing/)
 
-Read pipeline stages configured for a job and move candidates between stages (sourced, applied, phone screen, interview, offer, hired).
+#### Rate limits (1)
 
-#### Tags
+Published request limits.
 
-- Stages
-- Pipeline
+- [Workable Rate Limits](https://apis.io/rate-limits/workable/workable-rate-limits/)
 
-#### Properties
+#### FinOps (1)
 
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+What the API costs to run, by operation.
 
-### Workable Members API
+- [Workable Finops](https://apis.io/finops/workable/workable-finops/)
 
-Manage Workable team members, recruiter accounts, and the per-job collaborators (hiring managers, interviewers, reviewers).
+## Where to find this API
 
-#### Tags
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- Members
-- Recruiters
-- Users
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Recruiters API
-
-Manage external agency recruiters who can submit candidates against Workable jobs.
-
-#### Tags
-
-- Recruiters
-- External
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Departments API
-
-Read the company's department list used to scope job postings and reporting.
-
-#### Tags
-
-- Departments
-- Org Structure
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Custom Attributes API
-
-Define and read custom attributes attached to candidates, jobs, and requisitions for tenant-specific reporting and automation.
-
-#### Tags
-
-- Custom Attributes
-- Metadata
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Activities API
-
-Read activity-log entries for candidates and jobs (stage moves, comments, evaluations) for audit and integration use cases.
-
-#### Tags
-
-- Activities
-- Audit
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Comments API
-
-Add and read free-form comments and @-mentions on candidate profiles for collaboration with hiring teams.
-
-#### Tags
-
-- Comments
-- Notes
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Evaluations API
-
-Submit and read interviewer evaluations and scorecards aligned to the job's interview kit.
-
-#### Tags
-
-- Evaluations
-- Scorecards
-- Feedback
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Offers API
-
-Generate and track offers including templates, compensation breakdowns, and offer letter PDFs.
-
-#### Tags
-
-- Offers
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Assessments API
-
-Trigger and read candidate assessments delivered through Workable's assessment platform (Assessments+).
-
-#### Tags
-
-- Assessments
-- Tests
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Disqualification Reasons API
-
-List configured disqualification reasons used when rejecting a candidate (not a fit, withdrew, declined offer, hired elsewhere).
-
-#### Tags
-
-- Disqualification
-- Rejection
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Questions API
-
-Manage application form questions per job, including knockout questions and EEO surveys.
-
-#### Tags
-
-- Questions
-- Application Forms
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Events API
-
-Read and create scheduled events (phone screens, interviews) for a candidate, integrated with Workable's calendar sync.
-
-#### Tags
-
-- Events
-- Interviews
-- Scheduling
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Webhooks API
-
-Subscribe to Workable events (candidate.created, candidate.moved, candidate.hired, candidate.disqualified, member.created) for downstream automation.
-
-#### Tags
-
-- Webhooks
-- Subscriptions
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Workable Public Jobs API
-
-Read-only public endpoint that exposes published jobs for embedding job listings on external careers pages without authentication.
-
-#### Tags
-
-- Jobs
-- Public
-
-#### Properties
-
-- [Documentation](https://workable.readme.io/)
-- [Postman Collection](collections/workable.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/workable.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/workable-software)
 - [Website](https://www.workable.com/)
 - [Documentation](https://workable.readme.io/)
-- [API Reference](https://workable.readme.io/reference)
+- [API reference](https://workable.readme.io/reference)
 - [Pricing](https://www.workable.com/pricing)
-- [Login](https://www.workable.com/login)
-- [Status Page](https://status.workable.com/)
-- [Blog](https://resources.workable.com/)
 - [Support](https://help.workable.com/)
-- [GitHub Organization](https://github.com/Workable)
-- [Privacy Policy](https://www.workable.com/privacy-policy)
-- [Terms of Service](https://www.workable.com/terms)
-- [Plans](plans/workable-plans-pricing.yml)
-- [Rate Limits](rate-limits/workable-rate-limits.yml)
-- [Fin Ops](finops/workable-finops.yml)
-- [Features](undefined)
+- [Blog](https://resources.workable.com/)
+- [Terms of service](https://www.workable.com/terms)
+- [Privacy policy](https://www.workable.com/privacy-policy)
+- [GitHub](https://github.com/Workable)
+- [Status](https://status.workable.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 34.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 46.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 31.0 |
+| Access clarity | 43.4 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 20.6** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/workable/](https://apis.io/providers/workable/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Workable: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/workable/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
